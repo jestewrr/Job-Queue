@@ -1,0 +1,29 @@
+package Activity;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class PrintQueue_1 {
+
+	private Queue<PrintJob_1> queue;
+
+    public PrintQueue_1() {
+        this.queue = new LinkedList<>();
+    }
+
+    public void addJob(PrintJob_1 job) {
+        queue.add(job);
+        System.out.println("Added job: " + job);
+    }
+
+   
+    public void processJobs() {
+        System.out.println("\nStarting to process jobs...");
+        while (!queue.isEmpty()) {
+            PrintJob_1 job = queue.poll(); 
+            System.out.println("Processing " + job); 
+        }
+
+        System.out.println("All jobs processed.");
+    }
+}
