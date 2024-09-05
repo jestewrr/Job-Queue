@@ -1,0 +1,41 @@
+package Activity;
+import java.util.Scanner;
+
+public class Main {
+
+	
+		    public static void main(String[] args) {
+		       
+		        PrintQueue_1 queue = new PrintQueue_1();
+
+		        Scanner scanner = new Scanner(System.in);
+
+		        System.out.println("Welcome to Job Queue");
+
+		       
+		        System.out.println("How many print jobs would you like to add?");
+		        int numberOfJobs = scanner.nextInt();
+		        scanner.nextLine();
+		       
+		        for (int i = 1; i <= numberOfJobs; i++) {
+		            System.out.println("\nEnter details for Job " + i + ":");
+
+		            System.out.println("Enter Job ID (e.g., J1, J2):");
+		            String jobId = scanner.nextLine();
+
+		            System.out.println("Enter File Name (e.g., document.pdf):");
+		            String fileName = scanner.nextLine();
+
+		            System.out.println("Enter Job Priority (Normal/Urgent):");
+		            String priority = scanner.nextLine();
+
+		            PrintJob_1 job = new PrintJob_1(jobId, fileName, priority);
+		            queue.addJob(job);
+		        }
+
+		        System.out.println("\nProcessing jobs in the queue...");
+		        queue.processJobs();
+
+		        scanner.close();
+		    }
+		}
