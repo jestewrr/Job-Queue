@@ -1,0 +1,33 @@
+package Activity;
+
+public class PrintJob_1 {
+
+	    public String jobId;
+	    public String fileName;
+	    public String priority;
+
+	    public PrintJob_1(String jobId, String fileName, String priority) {
+	        this.jobId = jobId;
+	        this.fileName = fileName;
+	        this.priority = priority;
+	    }
+
+
+	    public String getJobId() {
+	        return jobId;
+	    }
+
+	    public String getFileName() {
+	        return fileName;
+	    }
+
+	    public String getPriority() {
+	        return priority;
+	    }
+
+	
+	    @Override
+	    public String toString() {
+	        return "Job ID: " + jobId + ", File: " + fileName + ", Priority: " + priority;
+	    }
+	}
